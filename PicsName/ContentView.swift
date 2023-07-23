@@ -15,14 +15,17 @@ struct ContentView: View {
             ScrollView {
                 VStack {
                     ForEach(viewModel.people.sorted()) { person in
-                        VStack {
+                        NavigationLink {
                             Image(uiImage: person.image)
                                 .resizable()
                                 .scaledToFit()
-                            
-                            Text(person.name)
-                                .font(.title)
+                                .ignoresSafeArea()
+                                .navigationTitle(person.name)
+                                
+                        } label: {
+                            PersonCard(image: Image(uiImage: person.image), name: person.name)
                         }
+                        .padding([.bottom, .horizontal])
                     }
                 }
             }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C10A96B2A6DA43900C3B161 /* PersonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10A96A2A6DA43900C3B161 /* PersonCard.swift */; };
 		7CD002D82A6D116400CD52B8 /* PicsNameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD002D72A6D116400CD52B8 /* PicsNameApp.swift */; };
 		7CD002DA2A6D116400CD52B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD002D92A6D116400CD52B8 /* ContentView.swift */; };
 		7CD002DC2A6D116500CD52B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD002DB2A6D116500CD52B8 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C10A96A2A6DA43900C3B161 /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
 		7CD002D42A6D116400CD52B8 /* PicsName.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicsName.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD002D72A6D116400CD52B8 /* PicsNameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsNameApp.swift; sourceTree = "<group>"; };
 		7CD002D92A6D116400CD52B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				7CD002E92A6D196900CD52B8 /* PhotoNamerView.swift */,
 				7CD002E72A6D129800CD52B8 /* PhotoPickerView.swift */,
 				7CD002EB2A6D1F4800CD52B8 /* ContentView-ViewModel.swift */,
+				7C10A96A2A6DA43900C3B161 /* PersonCard.swift */,
 				7CD002EF2A6D22FC00CD52B8 /* FileManager+DocumentsDir.swift */,
 				7CD002ED2A6D1F8000CD52B8 /* Person.swift */,
 				7CD002DB2A6D116500CD52B8 /* Assets.xcassets */,
@@ -160,6 +163,7 @@
 				7CD002DA2A6D116400CD52B8 /* ContentView.swift in Sources */,
 				7CD002E82A6D129800CD52B8 /* PhotoPickerView.swift in Sources */,
 				7CD002F02A6D22FC00CD52B8 /* FileManager+DocumentsDir.swift in Sources */,
+				7C10A96B2A6DA43900C3B161 /* PersonCard.swift in Sources */,
 				7CD002EC2A6D1F4800CD52B8 /* ContentView-ViewModel.swift in Sources */,
 				7CD002D82A6D116400CD52B8 /* PicsNameApp.swift in Sources */,
 				7CD002EA2A6D196900CD52B8 /* PhotoNamerView.swift in Sources */,
