@@ -42,7 +42,7 @@ struct PhotoPickerView: UIViewControllerRepresentable {
             
             if provider.canLoadObject(ofClass: UIImage.self) {
                 provider.loadObject(ofClass: UIImage.self) { item, error in
-                    if let error = error {
+                    if error != nil {
                         return
                     }
                     
