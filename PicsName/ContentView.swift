@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var uiImage: UIImage?
+    @State private var isShowingPhotoPicker = false
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            ZStack {
+                Rectangle()
+                    .fill(.gray)
+                
+                Text("Select image")
+                    .foregroundColor(.white)
+                
+                if let uiImage = uiImage {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                }
+            }
+            .onTapGesture {
+                isShowingPhotoPicker = true
+            }
         }
         .padding()
+        .sheet(isPresented: $isShowingPhotoPicker) {
+            PhotoPickerView(image: $uiImage)
+        }
     }
 }
 
