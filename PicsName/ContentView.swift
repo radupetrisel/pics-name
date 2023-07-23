@@ -8,15 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = ViewModel()
     
     var body: some View {
         NavigationView {
-            VStack {
-                
+            ScrollView {
+                VStack {
+                    ForEach(viewModel.people) { person in
+                        VStack {
+                            person.image
+                                .resizable()
+                                .scaledToFit()
+                            
+                            Text(person.name)
+                                .font(.title)
+                        }
+                    }
+                }
             }
             .toolbar {
                 NavigationLink {
-                    PhotoNamerView()
+                    PhotoNamerView { uiImage, name in
+                        let person = Person(image: Image(uiImage: uiImage), name: name)
+                        viewModel.people.append(person)
+                    }
                 } label: {
                     Label("Add", systemImage: "plus")
                 }

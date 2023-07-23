@@ -13,6 +13,8 @@ struct PhotoNamerView: View {
     @State private var name = ""
     @State private var isShowingImagePicker = false
     
+    let didFinishNamingImage: (UIImage, String) -> Void
+    
     private var isDoneDisabled: Bool {
         uiImage == nil ||  name.isEmpty
     }
@@ -45,6 +47,7 @@ struct PhotoNamerView: View {
         }
         .toolbar {
             Button("Done") {
+                didFinishNamingImage(uiImage!, name)
                 dismiss()
             }
             .disabled(isDoneDisabled)
@@ -55,7 +58,7 @@ struct PhotoNamerView: View {
 struct PhotoNamerView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PhotoNamerView()
+            PhotoNamerView { _, _ in }
         }
     }
 }
