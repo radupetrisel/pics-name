@@ -29,8 +29,7 @@ struct ContentView: View {
             .toolbar {
                 NavigationLink {
                     PhotoNamerView { uiImage, name in
-                        let person = Person(image: Image(uiImage: uiImage), name: name)
-                        viewModel.people.append(person)
+                        viewModel.addPerson(uiImage: uiImage, name: name)
                     }
                 } label: {
                     Label("Add", systemImage: "plus")
