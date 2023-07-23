@@ -16,6 +16,7 @@
 		7CD002EA2A6D196900CD52B8 /* PhotoNamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD002E92A6D196900CD52B8 /* PhotoNamerView.swift */; };
 		7CD002EC2A6D1F4800CD52B8 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD002EB2A6D1F4800CD52B8 /* ContentView-ViewModel.swift */; };
 		7CD002EE2A6D1F8000CD52B8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD002ED2A6D1F8000CD52B8 /* Person.swift */; };
+		7CD002F02A6D22FC00CD52B8 /* FileManager+DocumentsDir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD002EF2A6D22FC00CD52B8 /* FileManager+DocumentsDir.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7CD002E92A6D196900CD52B8 /* PhotoNamerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoNamerView.swift; sourceTree = "<group>"; };
 		7CD002EB2A6D1F4800CD52B8 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 		7CD002ED2A6D1F8000CD52B8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		7CD002EF2A6D22FC00CD52B8 /* FileManager+DocumentsDir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+DocumentsDir.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				7CD002E92A6D196900CD52B8 /* PhotoNamerView.swift */,
 				7CD002E72A6D129800CD52B8 /* PhotoPickerView.swift */,
 				7CD002EB2A6D1F4800CD52B8 /* ContentView-ViewModel.swift */,
+				7CD002EF2A6D22FC00CD52B8 /* FileManager+DocumentsDir.swift */,
 				7CD002ED2A6D1F8000CD52B8 /* Person.swift */,
 				7CD002DB2A6D116500CD52B8 /* Assets.xcassets */,
 				7CD002DD2A6D116500CD52B8 /* Preview Content */,
@@ -156,6 +159,7 @@
 				7CD002EE2A6D1F8000CD52B8 /* Person.swift in Sources */,
 				7CD002DA2A6D116400CD52B8 /* ContentView.swift in Sources */,
 				7CD002E82A6D129800CD52B8 /* PhotoPickerView.swift in Sources */,
+				7CD002F02A6D22FC00CD52B8 /* FileManager+DocumentsDir.swift in Sources */,
 				7CD002EC2A6D1F4800CD52B8 /* ContentView-ViewModel.swift in Sources */,
 				7CD002D82A6D116400CD52B8 /* PicsNameApp.swift in Sources */,
 				7CD002EA2A6D196900CD52B8 /* PhotoNamerView.swift in Sources */,

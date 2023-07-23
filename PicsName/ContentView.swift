@@ -16,7 +16,7 @@ struct ContentView: View {
                 VStack {
                     ForEach(viewModel.people.sorted()) { person in
                         VStack {
-                            person.image
+                            Image(uiImage: person.image)
                                 .resizable()
                                 .scaledToFit()
                             

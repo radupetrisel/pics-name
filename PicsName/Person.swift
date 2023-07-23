@@ -7,12 +7,22 @@
 
 import SwiftUI
 
-struct Person: Identifiable, Comparable {
+struct Person: Identifiable, Codable, Comparable {
     let id = UUID()
-    let image: Image
+    let imagePath: URL
     let name: String
+    
+    var image: UIImage {
+        let jpegData = try! Data(contentsOf: imagePath)
+        return UIImage(data: jpegData)!
+    }
     
     static func <(lhs: Person, rhs: Person) -> Bool {
         lhs.name < rhs.name
+    }
+    
+    enum CodingKeys: CodingKey {
+        case imagePath
+        case name
     }
 }

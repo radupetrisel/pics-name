@@ -9,10 +9,44 @@ import SwiftUI
 
 extension ContentView {
     @MainActor final class ViewModel: ObservableObject {
-        @Published private(set) var people = [Person]()
+        private static let peopleKey = "people"
+        
+        @Published private(set) var people: [Person]
+        
+        @Published var imageSaveDidHaveErrors = false
+        
+        init() {
+            if let jsonData = UserDefaults.standard.data(forKey: Self.peopleKey) {
+                if let people = try? JSONDecoder().decode([Person].self, from: jsonData) {
+                    self.people = people
+                    return
+                }
+            }
+            
+            people = []
+        }
         
         func addPerson(uiImage: UIImage, name: String) {
-            people.append(Person(image: Image(uiImage: uiImage), name: name))
+            if let jpegData = uiImage.jpegData(compressionQuality: 1.0) {
+                let imagePath = FileManager.documentsDir.appending(component: UUID().uuidString)
+                do {
+                    try jpegData.write(to: imagePath, options: [.atomic, .completeFileProtection])
+                    people.append(Person(imagePath: imagePath, name: name))
+                    save()
+                } catch {
+                    imageSaveDidHaveErrors = true
+                }
+            }
+        }
+        
+        func save() {
+            do {
+                let jsonData = try JSONEncoder().encode(people)
+                
+                UserDefaults.standard.set(jsonData, forKey: Self.peopleKey)
+            } catch {
+                print("Could not save people to UserDefaults.")
+            }
         }
     }
 }
