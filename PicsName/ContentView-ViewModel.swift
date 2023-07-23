@@ -28,10 +28,11 @@ extension ContentView {
         
         func addPerson(uiImage: UIImage, name: String) {
             if let jpegData = uiImage.jpegData(compressionQuality: 1.0) {
-                let imagePath = FileManager.documentsDir.appending(component: UUID().uuidString)
+                let imageName = UUID().uuidString
+                let imagePath = FileManager.documentsDir.appending(component: imageName)
                 do {
                     try jpegData.write(to: imagePath, options: [.atomic, .completeFileProtection])
-                    people.append(Person(imagePath: imagePath, name: name))
+                    people.append(Person(imageName: imageName, name: name))
                     save()
                 } catch {
                     imageSaveDidHaveErrors = true

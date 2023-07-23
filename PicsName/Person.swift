@@ -9,11 +9,11 @@ import SwiftUI
 
 struct Person: Identifiable, Codable, Comparable {
     let id = UUID()
-    let imagePath: URL
+    let imageName: String
     let name: String
     
     var image: UIImage {
-        let jpegData = try! Data(contentsOf: imagePath)
+        let jpegData = try! Data(contentsOf: FileManager.documentsDir.appending(component: imageName))
         return UIImage(data: jpegData)!
     }
     
@@ -22,7 +22,7 @@ struct Person: Identifiable, Codable, Comparable {
     }
     
     enum CodingKeys: CodingKey {
-        case imagePath
+        case imageName
         case name
     }
 }
