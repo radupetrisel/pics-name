@@ -13,6 +13,10 @@ struct PhotoNamerView: View {
     @State private var name = ""
     @State private var isShowingImagePicker = false
     
+    private var isDoneDisabled: Bool {
+        uiImage == nil ||  name.isEmpty
+    }
+    
     var body: some View {
         VStack {
             ZStack {
@@ -43,6 +47,7 @@ struct PhotoNamerView: View {
             Button("Done") {
                 dismiss()
             }
+            .disabled(isDoneDisabled)
         }
     }
 }
