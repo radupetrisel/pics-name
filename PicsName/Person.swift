@@ -7,8 +7,12 @@
 
 import SwiftUI
 
-struct Person: Identifiable {
+struct Person: Identifiable, Comparable {
     let id = UUID()
     let image: Image
     let name: String
+    
+    static func <(lhs: Person, rhs: Person) -> Bool {
+        lhs.name < rhs.name
+    }
 }

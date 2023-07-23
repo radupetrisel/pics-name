@@ -14,7 +14,7 @@ struct ContentView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    ForEach(viewModel.people) { person in
+                    ForEach(viewModel.people.sorted()) { person in
                         VStack {
                             person.image
                                 .resizable()
