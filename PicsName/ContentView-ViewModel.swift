@@ -32,7 +32,7 @@ extension ContentView {
                 let imagePath = FileManager.documentsDir.appending(component: imageName)
                 do {
                     try jpegData.write(to: imagePath, options: [.atomic, .completeFileProtection])
-                    people.append(Person(imageName: imageName, name: name))
+                    people.append(Person(imageName: imageName, name: name, latitude: 0, longitude: 0))
                     save()
                 } catch {
                     imageSaveDidHaveErrors = true
