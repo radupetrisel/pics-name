@@ -16,12 +16,7 @@ struct ContentView: View {
                 VStack {
                     ForEach(viewModel.people.sorted()) { person in
                         NavigationLink {
-                            Image(uiImage: person.image)
-                                .resizable()
-                                .scaledToFit()
-                                .ignoresSafeArea()
-                                .navigationTitle(person.name)
-                                
+                            PersonDetailView(image: Image(uiImage: person.image), name: person.name, location: person.location)
                         } label: {
                             PersonCard(image: Image(uiImage: person.image), name: person.name)
                         }
