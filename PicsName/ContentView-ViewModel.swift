@@ -11,6 +11,8 @@ extension ContentView {
     @MainActor final class ViewModel: ObservableObject {
         private static let peopleKey = "people"
         
+        private let locationFetcher = LocationFetcher()
+        
         @Published private(set) var people: [Person]
         
         @Published var imageSaveDidHaveErrors = false
@@ -32,7 +34,8 @@ extension ContentView {
                 let imagePath = FileManager.documentsDir.appending(component: imageName)
                 do {
                     try jpegData.write(to: imagePath, options: [.atomic, .completeFileProtection])
-                    people.append(Person(imageName: imageName, name: name, latitude: 0, longitude: 0))
+                    let lastKnownLocation = locationFetcher.lastKnownLocation
+                    people.append(Person(imageName: imageName, name: name, latitude: lastKnownLocation?.latitude ?? 0, longitude: lastKnownLocation?.longitude ?? 0))
                     save()
                 } catch {
                     imageSaveDidHaveErrors = true

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C10A96B2A6DA43900C3B161 /* PersonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C10A96A2A6DA43900C3B161 /* PersonCard.swift */; };
 		7C5D68E82A6E5EA400F1DB3F /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D68E72A6E5EA400F1DB3F /* PersonDetailView.swift */; };
+		7C5D68EA2A6E643A00F1DB3F /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D68E92A6E643A00F1DB3F /* LocationFetcher.swift */; };
 		7CD002D82A6D116400CD52B8 /* PicsNameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD002D72A6D116400CD52B8 /* PicsNameApp.swift */; };
 		7CD002DA2A6D116400CD52B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD002D92A6D116400CD52B8 /* ContentView.swift */; };
 		7CD002DC2A6D116500CD52B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD002DB2A6D116500CD52B8 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		7C10A96A2A6DA43900C3B161 /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
 		7C5D68E72A6E5EA400F1DB3F /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
+		7C5D68E92A6E643A00F1DB3F /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 		7CD002D42A6D116400CD52B8 /* PicsName.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicsName.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD002D72A6D116400CD52B8 /* PicsNameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsNameApp.swift; sourceTree = "<group>"; };
 		7CD002D92A6D116400CD52B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				7C10A96A2A6DA43900C3B161 /* PersonCard.swift */,
 				7CD002EF2A6D22FC00CD52B8 /* FileManager+DocumentsDir.swift */,
 				7CD002ED2A6D1F8000CD52B8 /* Person.swift */,
+				7C5D68E92A6E643A00F1DB3F /* LocationFetcher.swift */,
 				7CD002DB2A6D116500CD52B8 /* Assets.xcassets */,
 				7CD002DD2A6D116500CD52B8 /* Preview Content */,
 			);
@@ -164,6 +167,7 @@
 			files = (
 				7CD002EE2A6D1F8000CD52B8 /* Person.swift in Sources */,
 				7CD002DA2A6D116400CD52B8 /* ContentView.swift in Sources */,
+				7C5D68EA2A6E643A00F1DB3F /* LocationFetcher.swift in Sources */,
 				7CD002E82A6D129800CD52B8 /* PhotoPickerView.swift in Sources */,
 				7CD002F02A6D22FC00CD52B8 /* FileManager+DocumentsDir.swift in Sources */,
 				7C5D68E82A6E5EA400F1DB3F /* PersonDetailView.swift in Sources */,
@@ -302,6 +306,7 @@
 				DEVELOPMENT_TEAM = ATK7X87JFN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We want to save your location when adding photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -331,6 +336,7 @@
 				DEVELOPMENT_TEAM = ATK7X87JFN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We want to save your location when adding photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
